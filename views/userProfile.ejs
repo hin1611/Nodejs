@@ -1,0 +1,28 @@
+<%- include('header') %>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Thông Tin Tài Khoản</h1>
+
+        <!-- Thông tin người dùng -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Thông tin chi tiết</h5>
+                <p><strong>Tên Đăng Nhập:</strong> <%= user.username %></p>
+                <p><strong>Họ Tên:</strong> <%= user.fullname %></p>
+                <p><strong>Địa Chỉ:</strong> <%= user.address %></p>
+                <p><strong>Giới Tính:</strong> <%= user.sex %></p>
+                <p><strong>Email:</strong> <%= user.email %></p>
+            </div>
+        </div>
+
+        <!-- Nút chỉnh sửa -->
+        <div class="text-center mt-4">
+            <form action="/users/self/edit" method="POST">
+                <button type="submit" class="btn btn-primary">Chỉnh Sửa Thông Tin</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+<%- include('footer') %>

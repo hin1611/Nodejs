@@ -1,0 +1,39 @@
+<%- include('header') %>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Chỉnh sửa người dùng</h1>
+
+        <!-- Form chỉnh sửa người dùng -->
+        <form action="/users/edit/<%= user.id %>" method="POST">
+            <div class="form-group">
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" class="form-control" name="username" value="<%= user.username %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fullname">Họ và tên:</label>
+                <input type="text" class="form-control" name="fullname" value="<%= user.fullname %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" class="form-control" name="address" value="<%= user.address %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sex">Giới tính:</label>
+                <input type="text" class="form-control" name="sex" value="<%= user.sex %>" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" name="email" value="<%= user.email %>" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Cập nhật người dùng</button>
+        </form>
+    </div>
+</body>
+
+<%- include('footer') %>
